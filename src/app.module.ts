@@ -1,14 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { MoviesController } from './movies/movies.controller';
-import { MoviesService } from './movies/movies.service';
+import { MoviesModule } from './movies/movies.module';
+import { AppController } from './app/app.controller';
 
 //  데코레이터
 @Module({
-  imports: [],
-  controllers: [AppController, MoviesController],
-  providers: [AppService, MoviesService],
+  imports: [MoviesModule],
+  controllers: [AppController],
+  providers: [],
 })
 export class AppModule {}
 // 앱 모듈은, 모든 것의 루트 모듈 같은
