@@ -14,7 +14,7 @@ export class MoviesService {
   getOne(id: number): Movie {
     const movie = this.movies.find((movie) => movie.id === +id);
     if (!movie) {
-      throw new NotFoundException(`Not fond movie ID: ${id}`);
+      throw new NotFoundException(`Not found movie ID: ${id}`);
       // NestJS 가 제공하는 예외처리, HttpException 에서 확장된 NestJS의 제공 기능
     }
     return movie;
