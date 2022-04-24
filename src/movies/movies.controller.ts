@@ -4,7 +4,6 @@ import {
   Param,
   Post,
   Delete,
-  Put,
   Patch,
   Body,
   Query,
